@@ -37,10 +37,40 @@ function myFun(total, value, index, array){
 console.log(a4);
 console.log(sum); 
 
-// every method check to pass a test or not
+// every method check to all elements pass a test or not
 var a5 = [1,2,3,4,5];
-var over0 = a5.every(myFun2);
+var over3 = a5.every(myFun2);
 function myFun2(value, index, array) {
-    return value > 0; 
+    return value > 3; 
 }
-console.log(over0);
+console.log(over3);
+
+// some method check to any elements pass a test or  not 
+var over2 = a5.some(myFun3);
+function myFun3(value, index, array) {
+    return value > 2;
+}
+console.log(over2);
+
+//indexOf
+var fruits = ["mango", "apple", "kiwi", "apple", "mango", "watermelon", "apple", "jackfruit", "mango"];
+console.log(fruits.length);
+var p = fruits.indexOf("mango");
+console.log(p);
+var q = fruits.indexOf("mango", 2);
+console.log(q);
+var r = fruits.lastIndexOf("mango");
+console.log(r);
+
+//find find:first element after pass test, findIndex: index of first number pass test
+var num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+var x = num.find(myF);
+var y = num.findIndex(myF1);
+function myF(value, index, array){
+    return value > 10; 
+}
+function myF1(value, index, array){
+    return value > 10;
+}
+console.log(x);
+console.log(y);
