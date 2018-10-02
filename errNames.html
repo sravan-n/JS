@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <p id = "p1"> </p>
+        <p id = "p2"> </p>
+        <p id = "p3"> </p>
+        <p id = "p4"> </p>
+        <script>
+            try {
+                eval("alert('hello)");
+            }
+            catch (err) {
+                document.getElementById("p1").innerHTML = err.name;
+            }
+            try {
+                var x = 1; 
+                x = x + y;
+            }
+            catch (err) {
+                document.getElementById("p2").innerHTML = err.name;
+            }
+            var num = 1;
+            try {
+                var  no = 10;
+                no.toUpperCase();
+            }
+            catch (err) {
+                document.getElementById("p3").innerHTML = err.name;
+            }
+            try {
+                decodeURI("%%%");
+            }
+            catch (err) {
+                document.getElementById("p4").innerHTML = err.name;
+            }
+        </script>
+    </body>
+</html>
