@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <p id = "demo"> </p>
+        <script> 
+           var data = '{"persons":[{"fName": "Sravan", "lName": "Kumar"}, {"fName": "Pranav", "lName": "Kumar"}]}'; 
+           obj = JSON.parse(data);
+           var p; 
+           function fullName(p){
+               return obj.persons[p].fName + " " + obj.persons[p].lName; 
+           }
+           document.getElementById("demo").innerHTML = fullName(0);
+        </script>
+    </body>
+</html>
