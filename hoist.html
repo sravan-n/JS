@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <p id = "demo"></p>
+        <script>
+        var x = 5;
+        z = 6;
+        var a; 
+        document.getElementById("demo").innerHTML = x + " " + z + " " + y + " " + a;
+        var y = 7; // undefined
+        var z; // hoist
+        a = 8; //undefined
+        </script>
+    </body>
+</html>
