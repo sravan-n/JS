@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <form>
+           Name: <input id ="name" type="text"> 
+           <button type="button" onclick="valid()">Submit</button>
+        </form>
+        <script>
+            function valid() {
+                var x = document.getElementById("name").value;
+                var y = isNaN(x);
+                if (x == "" || !y) {
+                    alert("Invalid: Please Enter Name");
+                } else {
+                    alert("Name Submitted");
+                }
+            } 
+        </script>    
+    </body>
+</html>
