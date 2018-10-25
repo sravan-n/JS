@@ -1,8 +1,9 @@
 var person = {
-    firstName: "Sravan Kumar",
-    lastName: "Nuthalapati",
-    fullName: function(){
-        return this.firstName + " " + this.lastName;
+    fname: 'sravan', lname: 'kumar',
+    fullname: function() {  // function in object --> method
+        return this.fname + this.lname
     }
 }
-console.log(person.fullName());
+
+
+console.log(person.fullname()); // function in object --> method 
