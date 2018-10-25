@@ -1,13 +1,30 @@
-// call()
-var obj1 = {name:"Sravan"}
-function myF1(a1, b1) {
-    return "Welcome " + this.name + " " + a1 + " and " + b1;
+var person = {
+    fullName : function (age, country) {
+        return this.fname + ' ' + this.lname + ' age: ' + age + ' country: ' + country
+    }
 }
-console.log(myF1.call(obj1, "Kumar", "Arjun"));
-//apply()
-var obj2 = {name:"Sravan"}
-function myF2(a2, b2) {
-    return "Welcome " + this.name + " " + a2 + " and " + b2;  
+var xperson = {
+    fullName : function() {
+        return this.fname + ' ' + this.lname;
+    }
 }
-var args = ["Kumar", "Arjun"];
-console.log(myF2.apply(obj2, args));
+
+var details ={
+    fname: 'sravan', 
+    lname: 'kumar'
+}
+
+console.log('-----------------------------------');
+console.log(xperson.fullName.call(details)); // call invokes object as an argument 
+console.log('-----------------------------------');
+console.log(person.fullName.call(details, [26, 'India'])); // call invokes object as an argument
+//for person we need 2 arguments so it will call details as usual 
+//and takes array as first argument and second argument as undefined
+console.log('-----------------------------------');
+console.log(xperson.fullName.apply(details)); // apply also invokes object as an argument same like call
+console.log('-----------------------------------');
+console.log(person.fullName.apply(details, [26, 'USA'])); // apply takes array as argument
+console.log('-----------------------------------');
+console.log(person.fullName.apply(details)); // if we didnt give array its return undefined
+console.log('-----------------------------------');
+
